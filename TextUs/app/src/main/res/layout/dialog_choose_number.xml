@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialog_ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="@dimen/dialog_spacing">
+
+    <LinearLayout
+        android:id="@+id/dialog_contact_ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/view_white_bg"
+        android:orientation="vertical">
+
+        <com.textus.textus.view.CustomClickTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dialog_item_padding"
+            android:text="@string/user_which_number"
+            android:textColor="@color/template_content"
+            android:textSize="@dimen/toolbar_title" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dialog_contact_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dialog_spacing"
+        android:background="@drawable/view_white_bg"
+        android:orientation="vertical">
+
+        <com.textus.textus.view.CustomClickTextView
+            android:id="@+id/dialog_contact_btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/dialog_item_padding"
+            android:text="@string/cancel"
+            android:textColor="@color/btn_save"
+            android:textSize="@dimen/dialog_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

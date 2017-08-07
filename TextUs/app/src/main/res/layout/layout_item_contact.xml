@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <com.textus.textus.view.CustomClickTextView
+        android:id="@+id/contact_item_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:padding="2dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/conver_item_name" />
+
+    <com.textus.textus.view.CustomClickTextView
+        android:id="@+id/contact_item_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/contact_item_first_name"
+        android:layout_toLeftOf="@+id/contact_item_detail"
+        android:layout_toRightOf="@+id/contact_item_first_name"
+        android:layout_toStartOf="@+id/contact_item_detail"
+        android:ellipsize="end"
+        android:padding="2dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/conver_item_name"
+        android:textStyle="bold" />
+
+    <com.textus.textus.view.CustomImageButton
+        android:id="@+id/contact_item_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_action_right" />
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/chat_ll_input"
+        android:layout_below="@+id/toolbar"
+        android:clipToPadding="false"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:id="@+id/chat_ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/tab_deselected"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <com.textus.textus.view.CustomImageButton
+            android:id="@+id/chat_btn_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/ic_action_camera"
+            android:visibility="gone" />
+
+        <com.textus.textus.view.CustomImageButton
+            android:id="@+id/chat_btn_template"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/ic_action_templates"
+            android:visibility="gone" />
+
+        <com.textus.textus.view.CustomImageButton
+            android:id="@+id/chat_btn_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/ic_action_expand" />
+
+        <com.textus.textus.view.CustomEditText
+            android:id="@+id/chat_edt_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edt_chat"
+            android:hint="@string/new_message"
+            android:imeOptions="actionSend"
+            android:inputType="text|textMultiLine"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/edt_border"
+            android:textSize="@dimen/edt_chat" />
+
+        <com.textus.textus.view.CustomImageButton
+            android:id="@+id/chat_btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:src="@drawable/ic_action_send" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="invisible"
+        android:clipToPadding="false"
+        android:padding="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

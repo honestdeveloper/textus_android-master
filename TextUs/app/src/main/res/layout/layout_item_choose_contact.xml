@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.textus.textus.view.CustomClickTextView
+        android:id="@+id/dialog_contact_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/dialog_item_padding"
+        android:text="@string/import_contact"
+        android:textColor="@color/btn_save"
+        android:textSize="@dimen/dialog_text_size" />
+
+    <View
+        android:id="@+id/dialog_contact_sep"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/edt_border" />
+</LinearLayout>

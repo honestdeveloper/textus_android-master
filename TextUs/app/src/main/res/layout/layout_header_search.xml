@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/tab_deselected"
+    android:padding="6dp"
+    android:visibility="invisible">
+
+    <EditText
+        android:id="@+id/header_edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/searchview_bg"
+        android:hint="@string/search"
+        android:imeOptions="actionDone"
+        android:inputType="none"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColorHint="@color/edt_border"
+        android:textSize="@dimen/conver_search_text" />
+
+    <com.textus.textus.view.CustomImageButton
+        android:id="@+id/header_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:src="@drawable/ic_action_close"
+        android:visibility="invisible" />
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding">
+
+        <com.textus.textus.view.CustomClickTextView
+            android:id="@+id/detail_txt_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_txt_name" />
+
+        <com.textus.textus.view.CustomClickTextView
+            android:id="@+id/detail_txt_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/detail_txt_first_name"
+            android:layout_toRightOf="@+id/detail_txt_first_name"
+            android:ellipsize="end"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_txt_name"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/detail_rl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_txt_last_name">
+
+            <com.textus.textus.view.CustomTextView
+                android:id="@+id/detail_lbl_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_padding"
+                android:text="@string/phone"
+                android:textColor="@color/list_time_color"
+                android:textSize="@dimen/detail_lbl_business" />
+
+            <com.textus.textus.view.CustomTextView
+                android:id="@+id/detail_txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_lbl_phone"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/detail_txt_phone" />
+
+            <com.textus.textus.view.CustomImageButton
+                android:id="@+id/detail_btn_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/detail_btn_call"
+                android:layout_toStartOf="@+id/detail_btn_call"
+                android:padding="5dp"
+                android:src="@drawable/ic_action_message" />
+
+            <com.textus.textus.view.CustomImageButton
+                android:id="@+id/detail_btn_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_action_phone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/detail_txt_phone"
+                android:layout_marginTop="5dp"
+                android:background="@color/edt_border" />
+        </RelativeLayout>
+
+        <com.textus.textus.view.CustomTextView
+            android:id="@+id/detail_lbl_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_rl_phone"
+            android:layout_marginTop="@dimen/layout_padding"
+            android:text="@string/business"
+            android:textColor="@color/list_time_color"
+            android:textSize="@dimen/detail_lbl_business" />
+
+        <com.textus.textus.view.CustomTextView
+            android:id="@+id/detail_txt_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_lbl_business"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/detail_txt_phone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/detail_txt_business"
+            android:layout_marginTop="5dp"
+            android:background="@color/edt_border" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detail_txt_business"
+            android:layout_marginTop="30dp">
+
+            <com.textus.textus.view.CustomTextView
+                android:id="@+id/detail_lbl_opt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/opt_out"
+                android:textColor="@color/list_time_color"
+                android:textSize="@dimen/detail_lbl_opt" />
+
+            <Switch
+                android:id="@+id/detail_sw_opt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/detail_lbl_opt"
+                android:layout_toRightOf="@+id/detail_lbl_opt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/detail_lbl_opt"
+                android:layout_marginTop="10dp"
+                android:background="@color/edt_border" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

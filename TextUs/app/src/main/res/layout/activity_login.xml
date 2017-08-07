@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/layout_padding">
+
+            <com.textus.textus.view.CustomImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:padding="@dimen/layout_padding"
+                android:src="@drawable/imv_login_logo" />
+
+            <LinearLayout
+                android:id="@+id/login_ll_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_login_input"
+                android:orientation="vertical"
+                android:padding="@dimen/layout_padding">
+
+                <com.textus.textus.view.CustomEditText
+                    android:id="@+id/login_edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/layout_padding"
+                    android:background="@drawable/edt_bg"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/edit_text_padding"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/edt_border"
+                    android:textSize="@dimen/edit_text_size" />
+
+                <com.textus.textus.view.CustomEditText
+                    android:id="@+id/login_edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/layout_padding"
+                    android:background="@drawable/edt_bg"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/edit_text_padding"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/edt_border"
+                    android:textSize="@dimen/edit_text_size" />
+
+                <com.textus.textus.view.CustomClickTextView
+                    android:id="@+id/login_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/layout_padding"
+                    android:background="@drawable/btn_login"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:padding="@dimen/text_button_padding"
+                    android:text="@string/log_in"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_button_size"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.textus.textus.view.CustomImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:padding="@dimen/layout_padding"
+                android:src="@drawable/imv_login_logo"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

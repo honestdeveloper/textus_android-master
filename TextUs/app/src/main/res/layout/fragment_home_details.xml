@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/home_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false" />
+
+    <include
+        android:id="@+id/home_detail_search_layout"
+        layout="@layout/layout_header_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.textus.textus.view.CustomTextView
+        android:id="@+id/home_contact_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_detail_search_layout"
+        android:layout_margin="30dp"
+        android:background="@drawable/bg_contact_search"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/contact_message"
+        android:textColor="@color/tab_deselected_text"
+        android:textSize="@dimen/contact_search_message"
+        android:visibility="invisible" />
+</RelativeLayout>
